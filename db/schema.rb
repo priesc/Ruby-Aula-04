@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111010115521) do
+ActiveRecord::Schema.define(:version => 20111010145956) do
+
+  create_table "fornecedores", :force => true do |t|
+    t.string   "cnpf_cpf"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "nome"
+  end
 
   create_table "usuarios", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
