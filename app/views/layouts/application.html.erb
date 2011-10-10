@@ -10,10 +10,16 @@
 </head>
 <body>
 
-<%= yield %>
-	<p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+<% if current_usuario %>
 
+	<%= link_to 'Sair', destroy_usuario_session_path, method: :delete %>  
+	<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+<% end %>
+
+<%= yield %>
+	
 
 </body>
 </html>
